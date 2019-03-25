@@ -50,15 +50,28 @@ $AllArticles = $articles->fetchAll();
 foreach ($AllArticles as $article) {
 
     ?>
-    <img src="./storage/icon_intellinote.png" alt="Logo">
-    <img src='<?php echo $article['img']; ?>' />
-
-    <h2><?php echo ($article["title"]) ?></h2>
-    <img src="<?php echo ($article["img"])?>" alt="Logo"/>
-    <p><?php echo ($article["description"]) ?></p>
-    <p>Published at: <?php echo ($article["pub_date"]) ?></p>
+    <h2 style="text-align:center;"><?php echo ($article["title"]) ?></h2>
+    <img src="<?php echo ($article["img"])?>" alt="Logo" style="display:block; margin: 0 auto;"/>
+    <p style="text-align:inherit;"><?php echo ($article["description"]) ?></p>
+    <p style="text-align:center;">Published at: <?php echo ($article["pub_date"]) ?></p>
     <?php
+}
+
+
+
+?>
+
+<?php
+$newArticles = $connection->query("SELECT * FROM article WHERE title = 'Trello'");
+
+foreach ($newArticles as $newArticle) {
+    echo "<br><br> Here is only the Trello Article: <br>";
+    echo $newArticle["title"];
+    echo "<br><br>";
+    echo $newArticle["description"];
 }
 
 ?>
 
+</body>
+</html>
