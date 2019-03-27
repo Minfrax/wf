@@ -54,6 +54,7 @@ class User
         if (!in_array($role, $this->roles)) {
             array_push($this->roles, $role);
         }
+
         
         return $this;
     }
