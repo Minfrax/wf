@@ -1,0 +1,21 @@
+{
+    "name": "numericall/exercise4",
+    "description": "Exercise 4 from the OOP course",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Jerry",
+            "email": "hoffmann.jerry88@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/security": "^4.2@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "Model\\": "Model"
+        }
+    }
+}
